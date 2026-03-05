@@ -9,17 +9,24 @@
 </head>
 
 <body>
+
     <div class="login-container">
 
         <h1>Brew Haven ☕</h1>
         <p>Welcome back! Please sign in.</p>
+
         <form>
+
             <label>Email</label>
             <input type="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+
             <div class="password-container">
                 <input type="password" id="password" class="input-password" placeholder="Enter your password">
                 <span class="eye-icon" id="toggle">👁</span>
             </div>
+
             <div class="options">
                 <a href="#">Forgot Password?</a>
             </div>
@@ -29,25 +36,28 @@
             <p class="signup-text">
                 Don't have an account? <a href="#">Create Account</a>
             </p>
+
+        </form>
+
     </div>
-
-    </form>
+    
     <script>
-const password = document.getElementById("password");
-const toggle = document.getElementById("toggle");
+        const password = document.getElementById("password");
+        const toggle = document.getElementById("toggle");
 
-toggle.addEventListener("click", function () {
+        toggle.addEventListener("click", function () {
 
-    if (password.type === "password") {
-        password.type = "text";
-        toggle.textContent = "👁‍🗨";
-    } 
-    else {
-        password.type = "password";
-        toggle.textContent = "👁";
-    }
+            if (password.type === "password") {
+                password.type = "text";
+                toggle.textContent = "👁‍🗨";
+            }
+            else {
+                password.type = "password";
+                toggle.textContent = "👁";
+            }
 
-});
-</script>
+        });
+    </script>
+
 </body>
 </html>
